@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = ["Polaris", "Aldebaran","Deneb", "Vega", "Altair", "Dubhe",  "Regulus"];
+    let arr1=['UrsaMinor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'UrsaMajor', 'Leo'];
+
+
+    do {
+        check(arr,arr1)
+    }while (askMore())
+
+
+    function check(chuoi,chuoi2) {
+        let name = prompt("nhap ten ngoi sao tim kiem: ");
+        let i;
+        let x = false;
+        for (i = 0; i < 7; i++) {
+            if (chuoi[i] == name) {
+                alert(chuoi2[i]);
+                x = true;
+            }
+        }
+        if (!x){
+            alert("khong co")
+        }
+    }
+
+    function askMore() {
+        let answer = prompt("ban co muon tiep tuc khong");
+        if (answer == 'y'){
+            return true;
+        }
+    }
+
+</script>
+</body>
+</html>
